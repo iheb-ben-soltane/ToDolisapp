@@ -1,0 +1,157 @@
+/* ===== App container ===== */
+.app {
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+  font-family: "Arial", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Dark mode */
+.app.dark {
+  background: #0f172a; /* dark navy */
+  color: #f1f5f9;
+}
+
+/* Light mode */
+.app.light {
+  background: #f8fafc; /* light gray */
+  color: #0f172a;
+}
+
+/* Calendar */
+.custom-calendar {
+  background-color: inherit;
+  color: inherit;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.app.dark .react-calendar {
+  background-color: #1e293b;
+  color: #f1f5f9;
+  border: none;
+}
+
+.app.dark .react-calendar__tile--active {
+  background-color: #3b82f6;
+  color: #fff;
+}
+
+.app.light .react-calendar {
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
+.app.light .react-calendar__tile--active {
+  background-color: #2563eb;
+  color: #fff;
+}
+
+.app.dark .react-calendar__tile {
+  background: transparent;
+  color: inherit;
+}
+
+/* Calendar tiles */
+.react-calendar__tile {
+  background: transparent;
+  color: inherit;
+  transition: all 0.3s;
+}
+
+.react-calendar__tile--active {
+  background: #3b82f6;
+  color: white;
+  border-radius: 8px;
+}
+
+/* Cards */
+.card {
+  transition: background 0.3s, color 0.3s;
+}
+
+.app.dark .card {
+  background: #1e293b; /* dark card background */
+  color: #f1f5f9;
+}
+
+.app.light .card {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+/* Buttons */
+.btn {
+  transition: all 0.3s;
+}
+
+.app.dark .btn {
+  background-color: #3b82f6;
+  color: #fff;
+}
+
+.app.light .btn {
+  background-color: #2563eb;
+  color: #fff;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Dark/Light toggle button */
+.mode-toggle-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.mode-toggle-btn {
+  border-radius: 12px;
+  padding: 8px 16px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+/* ===== Add Task Button ===== */
+
+/* Container centré */
+.add-button-container {
+  text-align: center;
+  margin-top: 20px;
+  z-index: 10; /* au-dessus du WaveBackground */
+  position: relative;
+}
+
+/* Bouton Add Task */
+.btn-add {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 12px;
+  transition: all 0.3s;
+  border: none;
+  position: relative;
+  z-index: 10;
+  align-items: center;
+}
+
+/* Dark mode */
+.app.dark .btn-add {
+  background-color: #3b82f6; /* bleu clair pour dark mode */
+  color: #fff;
+}
+
+/* Light mode */
+.app.light .btn-add {
+  background-color: #2563eb; /* bleu un peu plus foncé pour light */
+  color: #fff;
+}
+
+/* Hover effect */
+.btn-add:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
